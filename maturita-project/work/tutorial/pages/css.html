@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/css.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      defer
+    ></script>
+    <script src="./js/css.js" defer></script>
+    <script src="./js/navbar.js" defer></script>
+    <script src="js/title.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="../img/logo.jpg" alt="" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li>
+            <a href="../tutorial.html">Úvod</a>
+          </li>
+          <li>
+            <a href="./html.html">HTML kurz</a>
+          </li>
+          <li>
+            <a href="./emmet.html">Emmet</a>
+          </li>
+          <li>
+            <a href="./js.html">JS kurz</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Full screen-->
+    <main class="full-screen">
+      <h1>Cascading Style Sheets</h1>
+    </main>
+    <!--Content-->
+    <main class="content">
+      <p>
+        neboli <dfn>css</dfn> se ve web developmentu používá na stylizaci HTML
+        kontentu.
+      </p>
+      <p>
+        Jakákoliv stylizace HTML se zapisuje do css, buď přímo pomoci "tagů",
+        "class" či "id".
+      </p>
+      <p>HTML se dá stylovat dvěma způsoby.</p>
+    </main>
+    <div class="container">
+      <div class="HTML_box">
+        <p style="color: #ddd; padding: 10px 2px 2px 10px; font-weight: bold;">Buď přímo do HTML</p>
+        <div class="HTML_styling">
+          <code _istranslated="1" class="style">&lt;!DOCTYPE html&gt;<br></code>
+          <code _istranslated="1" class="style">&lt;html&gt;<br></code>
+          <code _istranslated="1" class="style">&lt;head&gt;<br></code>
+          <code _istranslated="1" class="style">&lt;style&gt;<br></code>
+          <code _istranslated="1" class="style">body{<br></code>
+            <code _istranslated="1" class="bg">background:black;<br></code>
+            <code _istranslated="1" class="style">}<br></code>
+            <code _istranslated="1" class="style">&lt;/style&gt;<br></code>
+            <code _istranslated="1" class="style">&lt;/head&gt;<br></code>
+            <code _istranslated="1" class="style">&lt;/html&gt;<br></code>
+        </div>
+        <a href="./sandbox.html" class="sandbox">Vyzkoušej</a>
+      </div>
+      <!--css reset styling-->
+      <div class="CSS_box">
+        <p style="color: #ddd; padding: 10px 2px 2px 10px; font-weight: bold;">Nebo do CSS souboru.</p>
+        <div class="CSS_styling">
+          <code _istranslated="1">*{<br></code>
+            <code _istranslated="1" class="reset">margin:0;<br></code>
+            <code _istranslated="1" class="reset">padding:0;<br></code>
+            <code _istranslated="1" class="reset">box-sizing:border-box;<br></code>
+            <code _istranslated="1">}</code>
+        </div>
+        <a href="./sandbox.html" class="sandbox">Vyzkoušej</a>
+      </div>
+      <div class="box">
+        <p style="color: #ddd; padding: 10px 2px 2px 10px; font-weight: bold;">Aby CSS soubor správně fungoval, musí se v HTML hlavičce uvést externí odkaz na CSS soubor.</p>
+        <div class="CSS_link">
+          <code _istranslated="1" class="style">&lt;!DOCTYPE html&gt;<br></code>
+            <code _istranslated="1" class="style">&lt;html&gt;<br></code>
+            <code _istranslated="1" class="style">&lt;head&gt;<br></code>
+            <code _istranslated="1" class="style">&lt;link rel="stylesheet" href="style.css"</code>
+            <code _istranslated="1" class="style">/&gt;<br></code>
+            <code _istranslated="1" class="style">&lt;/head&gt;<br></code>
+              <code _istranslated="1" class="style">&lt;/html&gt;<br></code>
+        </div>
+        <a href="./sandbox.html" class="sandbox">Vyzkoušej</a>
+      </div>
+    </div>
+  </body>
+</html>

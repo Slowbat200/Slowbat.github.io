@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JS-tutorial">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/js.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <script src="./js/js.js" defer></script>
+    <script src="./js/navbar.js" defer></script>
+    <script src="js/title.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="../img/logo.jpg" alt="" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <ul class="links">
+          <li>
+            <a href="../tutorial.html">Úvod</a>
+          </li>
+          <li>
+            <a href="./css.html">CSS kurz</a>
+          </li>
+          <li>
+            <a href="./html.html">HTML kurz</a>
+          </li>
+        </ul>
+        <!-- social media -->
+      </div>
+    </nav>
+    <!--Full screen-->
+    <main class="full-screen">
+      <h1>JavaScript</h1>
+    </main>
+    <main class="content">
+      <p>JavaScript zkráceně JS je scriptovací jazyk určen pro tvorbu webů.</p>
+      <p>
+        Používá se zejména k určení vlastností jednotlivých elementu, v tom
+        smyslu, že například tento kód vytvoří tlačítko, které zobrazí přesný
+        čas.
+      </p>
+    </main>
+    <!--display date and time button example-->
+    <main id="code_examples">
+      <div class="display_time_button">
+        <code _istranslated="1" class="element_style">&lt;!DOCTYPE html&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;html&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;head&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;script&gt;<br /></code>
+        <code _istranslated="1" class="button_script">function displayDateTime() {<br /></code>
+        <code _istranslated="1" class="button_script">var currentDateTime = new Date();<br /></code>
+        <code _istranslated="1" class="button_script">document.getElementById("display").innerHTML = currentDateTime;<br /></code>
+        <code _istranslated="1" class="button_script">}<br /></code>
+        <code _istranslated="1" class="element_style">&lt;/script&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;/head&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;body&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;button onclick="displayDateTime()"&gt;Display date and time&lt;/button&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;div id="display"&gt;&lt;/div&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;/body&gt;<br /></code>
+        <code _istranslated="1" class="element_style">&lt;/html&gt;<br /></code>
+      </div>
+    </main>
+  </body>
+</html>
