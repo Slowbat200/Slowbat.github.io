@@ -1,0 +1,310 @@
+//root
+:root{
+  --elements-color:#7183e5;
+  --elements-ml:-2em;
+  --reset-color:#ccc9f0;
+  --values-color:#c0c6ca;
+  --values-positive-ml:2em;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #c0c6ca;
+  color: #071829;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  :is(h1, h2, h3, h4){
+    letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: monospace;
+  }
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+.content {
+  color: #1b1ba4;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*
+  ===============
+  Navbar
+  ===============
+  */
+nav {
+  position: fixed;
+  width: 100%;
+  top: -2px;
+  left: -0.5px;
+  border-radius: 20px;
+  background: rgb(237, 231, 231);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.102);
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-toggle {
+      font-size: 1.5rem;
+      color: #49a6e9;
+      background: transparent;
+      border-color: transparent;
+      transition: all 0.4s linear;
+      cursor: pointer;
+    }
+  }
+}
+.nav-toggle:hover {
+  color: #063251;
+  transform: rotate(90deg);
+}
+/*
+=======================
+logo with shake effect
+=======================
+*/
+.logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 63px;
+}
+.logo:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.links a {
+  color: #324d67;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s linear;
+}
+.links a:hover {
+  background: #a5d5f8;
+  color: #49a6e9;
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+  animation: borderScale 2s linear alternate;
+  border-radius: 3px;
+}
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s linear;
+}
+.show-links {
+  height: 10rem;
+}
+/*
+===============
+ shake effect
+===============
+*/
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+/*
+================================
+links with border scale effect
+================================
+*/
+@keyframes borderScale {
+  0%{padding: 0;}
+  50%{padding: 0.3em 0 0.3em 0;}
+  100%{padding: 0.4em 0 0.2em 0;}
+}
+
+.full-screen {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(132deg, rgba(35,33,205,1) 28%, rgb(227, 222, 222) 52%, rgba(84,85,238,1) 83%);
+  border-radius: 20px 20px 0 0;
+  h1 {
+    margin: 50vh 0 50vh 0;
+    text-align: center;
+  }
+}
+
+/*Sandbox button*/
+.sandbox {
+  box-shadow: 0px 9px 14px -7px #3e7327;
+  background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  border-radius: 5px;
+  border: 3px solid #4b8f29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ddd;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 11px 26px;
+  text-shadow: 0px 2px 0px #5b8a3c;
+  margin-left: 80%;
+  margin-bottom: 2em;
+}
+/*
+==============================
+how to style in HTML and CSS
+==============================
+*/
+.container{
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 40px;
+  .HTML_box{
+    width: 60%;
+    background: #071829;
+    outline: 2px solid blue;
+    .HTML_styling{
+      margin-left: var(--values-positive-ml);
+      :is(.style){
+        color: var(--elements-color);
+        margin-left: 1em;      
+      }
+      .bg{
+        margin-left: 1em;
+        color: var(--values-color);
+        margin-left: var(--values-positive-ml);
+      }
+    }
+  }
+  .CSS_box{
+    background: #071829;
+    width: 60%;
+    outline: 2px solid green;
+    .CSS_styling{
+      color: #d2d2f8;
+      margin-left: 1em;      
+      .reset{
+        color: var(--reset-color);
+        margin-left: var(--values-positive-ml);
+      }
+    }
+  }
+}
+/*
+=======================
+external link on CSS file
+=======================
+*/
+.box{
+  outline: 2px solid red;
+  background: #071829;
+  width: 60%;
+  .CSS_link{
+    color: var(--elements-color);
+    margin-left: var(--values-positive-ml);
+  }
+}
+/*
+==================
+Responsive navbar
+==================
+*/
+@media screen and (min-width: 800px) {
+  .nav-center {
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+    a {
+      padding: 0;
+      margin: 0 0.5rem;
+    }
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
+@media screen and(max-width:767px) {
+  h1{
+    font-size: 4em;
+  }
+  .logo {
+    margin: 2em 0 0 2em;
+  }
+  .sec1 { 
+    margin-left: 6em;
+    inline-size: 10em;
+  }
+}
+#sec1{
+  margin-top: 5em;
+}
